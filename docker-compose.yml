@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  speedtest:
+    container_name: speedtest
+    image: henrywhitaker3/speedtest-tracker
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Asia/Kuching
+      - OOKLA_EULA_GDPR=true
+    ports:
+      - 8788:80
+    volumes:
+      - /volume1/docker/speedtesttracker:/config
+    restart: unless-stopped
