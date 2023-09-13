@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  speedtest:
+    container_name: speedtest
+    image: openspeedtest:latest
+    ports:
+      - 3000:3000
+      - 3001:3001
+    
